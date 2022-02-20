@@ -11,7 +11,7 @@ const (
 
 
 
-func TestOk (in *testing.T){
+func TestCalc (t *testing.T){
 	testCases :=[]struct{
 		sideLen float64
 		sidesNum sideNumType
@@ -35,11 +35,12 @@ func TestOk (in *testing.T){
 	}
 	for _,tc:=range testCases{
 		//tc:=tc
-		if tc.square!= CalcSquare(tc.sideLen, tc.sidesNum){
-			in.Errorf("test finished with error, result of test: ")
-
+		actual:=CalcSquare(tc.sideLen, tc.sidesNum)
+		if tc.square-actual>0.01{
+			t.Errorf("test finished with error, result of test: ")
 		}
 	}
+	t.Log("OK!")
 }
 
 
