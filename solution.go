@@ -3,7 +3,11 @@ package square
 import (
 	"math"
 )
-
+const (
+	SidesTriangle =3
+	SidesSquare =4
+	SidesCircle=0
+)
 // Define custom int type to hold sides number and update CalcSquare signature by replacing #yourTypeNameHere#
 
 // Define constants to represent 0, 3 and 4 sides.  Test uses mnemos: SidesTriangle(==3), SidesSquare(==4), SidesCircle(==0)

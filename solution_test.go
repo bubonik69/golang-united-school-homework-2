@@ -3,11 +3,7 @@ import (
 "testing"
 )
 
-const (
-	SidesTriangle =3
-	SidesSquare =4
-	SidesCircle=0
-)
+
 
 
 
