@@ -1,8 +1,15 @@
 package square
-//package main
 import (
 "testing"
 )
+
+const (
+	SidesTriangle =3
+	SidesSquare =4
+	SidesCircle=0
+)
+
+
 
 func TestOk (in *testing.T){
 	testCases :=[]struct{
@@ -12,29 +19,28 @@ func TestOk (in *testing.T){
 	}{
 		{
 			sideLen: 10,
-			sidesNum: 0,
+			sidesNum: SidesCircle,
 			square:  314.1592653589793,
 		},
 		{
 			sideLen: 10,
-			sidesNum: 2,
+			sidesNum: SidesSquare,
 			square : 100,
 		},
 		{
 			sideLen: 10,
-			sidesNum: 3,
+			sidesNum: SidesTriangle,
 			square : 43.30127018922193,
 		},
 	}
 	for _,tc:=range testCases{
-		tc:=tc
+		//tc:=tc
 		if tc.square!= CalcSquare(tc.sideLen, tc.sidesNum){
-			in.Errorf("test finished with error")
-			return
+			in.Errorf("test finished with error, result of test: ")
+
 		}
-
 	}
-	return
-
 }
+
+
 

@@ -1,5 +1,4 @@
 package square
-//package main
 
 import (
 	"math"
@@ -21,12 +20,12 @@ func CalcSquare(sideLen float64, sidesNum sideNumType) float64 {
 	case 3:
 		return math.Sqrt(3)* math.Pow(sideLen,2)/4
 	case 4:
-		return  math.Pow(sideLen,2)/4
+		return  math.Pow(sideLen,2)
 	default:
 		return 0
 	}
 }
-func main (){
 
-}
+
+
 
